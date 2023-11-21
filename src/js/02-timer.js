@@ -28,11 +28,11 @@ function chekData() {
   }
 }
 
-function setTimer() {}
 
 startBtn.addEventListener('click', onClick);
 
 function onClick() {
+  startBtn.setAttribute('disabled', '');
   timerId = setInterval(() => {
     const deltaTime = userData - new Date().getTime();
     if (deltaTime < 1000) {
@@ -58,9 +58,11 @@ function convertMs(ms) {
   const hours = Math.floor((ms % day) / hour);
   const minutes = Math.floor(((ms % day) % hour) / minute);
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
-  setDays.textContent = days;
-  setHours.textContent = hours;
-  setMinutes.textContent = minutes;
-  setSeconds.textContent = seconds;
+  setDays.textContent = addLeadingZero(days);
+  setHours.textContent = addLeadingZero(hours);
+  setMinutes.textContent = addLeadingZero(minutes);
+  setSeconds.textContent = addLeadingZero(seconds);
 }
 
+function addLeadingZero(value) {
+  return value.toString().padStart(2, '0')}
