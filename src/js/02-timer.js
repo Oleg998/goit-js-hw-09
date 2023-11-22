@@ -34,10 +34,10 @@ function onClick() {
   startBtn.setAttribute('disabled', '');
   timerId = setInterval(() => {
     const deltaTime = userData - new Date().getTime();
-    if (deltaTime <= 1000) {
+    if (deltaTime <= 1050) {
       clearInterval(timerId);
     }
-    const result = convertMs(deltaTime);
+    convertMs(deltaTime);
   }, 1000);
 }
 
