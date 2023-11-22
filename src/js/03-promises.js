@@ -30,7 +30,7 @@ for ( let position=1 ; position<=amount ; position +=1   ) {
       });
     delay += step;
     form.reset();
-   
+    submitBtn.removeAttribute('disabled')
   }
   
 }
@@ -47,7 +47,7 @@ for ( let position=1 ; position<=amount ; position +=1   ) {
     }
    });
  }
- submitBtn.removeAttribute('disabled')
+
 
 
 
