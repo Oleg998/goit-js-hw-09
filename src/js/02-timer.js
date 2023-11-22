@@ -28,7 +28,6 @@ function chekData() {
   }
 }
 
-
 startBtn.addEventListener('click', onClick);
 
 function onClick() {
@@ -48,7 +47,6 @@ const setMinutes = document.querySelector('[data-minutes]');
 const setSeconds = document.querySelector('[data-seconds]');
 
 function convertMs(ms) {
-  // Number of milliseconds per unit of time
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
@@ -65,4 +63,5 @@ function convertMs(ms) {
 }
 
 function addLeadingZero(value) {
-  return value.toString().padStart(2, '0')}
+  return value.toString().padStart(2, '0');
+}

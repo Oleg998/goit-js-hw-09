@@ -4,6 +4,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 form.addEventListener("submit" , FormSubmit);
 function FormSubmit(evt) {
+  submitBtn.setAttribute('disabled', '');
    evt.preventDefault();
   
 let {
@@ -28,7 +29,10 @@ for ( let position=1 ; position<=amount ; position +=1   ) {
         }, delay);
       });
     delay += step;
+    form.reset();
+   
   }
+  
 }
 
  function createPromise(position, delay) {
@@ -43,7 +47,7 @@ for ( let position=1 ; position<=amount ; position +=1   ) {
     }
    });
  }
-
+ submitBtn.removeAttribute('disabled')
 
 
 
