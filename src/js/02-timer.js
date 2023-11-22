@@ -34,7 +34,7 @@ function onClick() {
   startBtn.setAttribute('disabled', '');
   timerId = setInterval(() => {
     const deltaTime = userData - new Date().getTime();
-    if (deltaTime <= 1050) {
+    if (deltaTime <= 0) {
       clearInterval(timerId);
     }
     convertMs(deltaTime);
