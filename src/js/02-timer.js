@@ -32,7 +32,7 @@ startBtn.addEventListener('click', onClick);
 
 function onClick() {
   startBtn.setAttribute('disabled', '');
-  timerId = setInterval(() => {
+    const timerId = setInterval(() => {
     const deltaTime = userData - new Date().getTime();
     if (deltaTime <1000) {
       clearInterval(timerId);
