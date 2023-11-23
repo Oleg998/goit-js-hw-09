@@ -37,6 +37,7 @@ function onClick() {
     const deltaTime = userData - new Date().getTime();
     if (deltaTime <1000) {
       clearInterval(timerId);
+      Notify.success(`✅ Time Up`);
     }
     convertMs(deltaTime);
   }, 1000);
